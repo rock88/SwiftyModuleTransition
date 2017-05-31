@@ -8,6 +8,6 @@
 
 import Foundation
 
-public protocol ModuleInput: class {
+private protocol ModuleInput: class {
     
 }

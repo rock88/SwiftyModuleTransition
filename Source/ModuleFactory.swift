@@ -15,7 +15,7 @@ public struct ModuleFactory<View: ModuleView> where View: UIViewController {
         self.handler = handler
     }
     
-    public func instantiateModuleTransitionHandler() -> View {
+    func instantiateModuleTransitionHandler() -> View {
         return handler()
     }
 }
