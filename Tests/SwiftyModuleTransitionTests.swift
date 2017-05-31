@@ -9,12 +9,12 @@
 import XCTest
 @testable import SwiftyModuleTransition
 
-class Presenter: ModuleInput {
+class Presenter {
     weak var view: AnyObject?
 }
 
 class View: UIViewController, ModuleView {
-    var output: ModuleInput!
+    var output: Any!
 }
 
 class SwiftyModuleTransitionTests: XCTestCase {
