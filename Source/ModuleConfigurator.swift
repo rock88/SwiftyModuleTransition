@@ -8,19 +8,15 @@
 
 import UIKit
 
-public protocol ModuleConfigurator {
-    func configure<Input>(handler: (Input) -> Void) -> ModuleTransition
-}
-
-struct ModuleConfiguratorImpl<View: ModuleView>: ModuleConfigurator where View: UIViewController {
+struct ModuleConfigurator<View: ModuleView> where View: UIViewController {
     let source: UIViewController
     let view: View
     
-    func configure<Input>(handler: (Input) -> Void) -> ModuleTransition {
-        if let input = view.output as? Input {
+    func configure<View: ModuleView>(handler: (View.Output) -> Void) -> ModuleTransition<View> {
+        if let input = view.output as? View.Output {
             handler(input)
         }
         
-        return ModuleTransitionImpl(source: source, destination: view)
+        return ModuleTransition(source: source, destination: view)
     }
 }

@@ -8,13 +8,9 @@
 
 import UIKit
 
-public protocol ModuleTransition {
-    func transition(handler: (UIViewController, UIViewController) -> Void)
-}
-
-struct ModuleTransitionImpl: ModuleTransition {
-    let source: UIViewController
-    let destination: UIViewController
+public struct ModuleTransition<View: ModuleView> where View: UIViewController {
+    internal let source: UIViewController
+    internal let destination: UIViewController
     
     func transition(handler: (UIViewController, UIViewController) -> Void) {
         handler(source, destination)

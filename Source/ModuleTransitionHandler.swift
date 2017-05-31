@@ -9,20 +9,16 @@
 import UIKit
 
 public protocol ModuleTransitionHandler: class {
-    func openModule<View: ModuleView>(factory: ModuleFactory<View>) -> ModuleConfigurator
-    func openModule<View: ModuleView>(factory: ModuleFactory<View>) -> ModuleTransition
+    func openModule<View: ModuleView>(factory: ModuleFactory<View>) -> ModuleOpener<View>
     func close()
 }
 
 extension UIViewController: ModuleTransitionHandler {
-    public func openModule<View: ModuleView>(factory: ModuleFactory<View>) -> ModuleConfigurator {
+    public func openModule<View: ModuleView>(factory: ModuleFactory<View>) -> ModuleOpener<View> {
         let view = factory.instantiateModuleTransitionHandler()
-        return ModuleConfiguratorImpl(source: self, view: view)
+        return ModuleOpener(source: self, view: view)
     }
     
-    public func openModule<View: ModuleView>(factory: ModuleFactory<View>) -> ModuleTransition {
-        let view = factory.instantiateModuleTransitionHandler()
-        return ModuleTransitionImpl(source: self, destination: view)
     public func close() {
         if let _ = presentingViewController {
             dismiss(animated: true, completion: nil)
