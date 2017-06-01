@@ -10,13 +10,11 @@
 		364A20761ED997A80043779C /* SwiftyModuleTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364A206D1ED997A80043779C /* SwiftyModuleTransition.framework */; };
 		364A207B1ED997A80043779C /* SwiftyModuleTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A207A1ED997A80043779C /* SwiftyModuleTransitionTests.swift */; };
 		364A207D1ED997A80043779C /* SwiftyModuleTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 364A206F1ED997A80043779C /* SwiftyModuleTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		364A20851ED998E20043779C /* ModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A20841ED998E20043779C /* ModuleInput.swift */; };
 		364A20871ED999E50043779C /* ModuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A20861ED999E50043779C /* ModuleView.swift */; };
 		364A20891ED99A0A0043779C /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A20881ED99A0A0043779C /* ModuleFactory.swift */; };
 		364A208B1ED99A670043779C /* ModuleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A208A1ED99A670043779C /* ModuleTransition.swift */; };
 		364A208D1ED99AA00043779C /* ModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A208C1ED99AA00043779C /* ModuleConfigurator.swift */; };
 		364A208F1ED99AE50043779C /* ModuleTransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A208E1ED99AE50043779C /* ModuleTransitionHandler.swift */; };
-		36DC1F5C1EDF17C80040B804 /* ModuleOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC1F5B1EDF17C80040B804 /* ModuleOpener.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +34,11 @@
 		364A20751ED997A80043779C /* SwiftyModuleTransitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyModuleTransitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		364A207A1ED997A80043779C /* SwiftyModuleTransitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyModuleTransitionTests.swift; sourceTree = "<group>"; };
 		364A207C1ED997A80043779C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		364A20841ED998E20043779C /* ModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleInput.swift; sourceTree = "<group>"; };
 		364A20861ED999E50043779C /* ModuleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleView.swift; sourceTree = "<group>"; };
 		364A20881ED99A0A0043779C /* ModuleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
 		364A208A1ED99A670043779C /* ModuleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTransition.swift; sourceTree = "<group>"; };
 		364A208C1ED99AA00043779C /* ModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleConfigurator.swift; sourceTree = "<group>"; };
 		364A208E1ED99AE50043779C /* ModuleTransitionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTransitionHandler.swift; sourceTree = "<group>"; };
-		36DC1F5B1EDF17C80040B804 /* ModuleOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleOpener.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +83,10 @@
 			children = (
 				364A206F1ED997A80043779C /* SwiftyModuleTransition.h */,
 				364A20701ED997A80043779C /* Info.plist */,
-				364A20841ED998E20043779C /* ModuleInput.swift */,
 				364A20861ED999E50043779C /* ModuleView.swift */,
 				364A20881ED99A0A0043779C /* ModuleFactory.swift */,
 				364A208A1ED99A670043779C /* ModuleTransition.swift */,
 				364A208C1ED99AA00043779C /* ModuleConfigurator.swift */,
-				36DC1F5B1EDF17C80040B804 /* ModuleOpener.swift */,
 				364A208E1ED99AE50043779C /* ModuleTransitionHandler.swift */,
 			);
 			path = Source;
@@ -219,11 +213,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				364A20871ED999E50043779C /* ModuleView.swift in Sources */,
-				36DC1F5C1EDF17C80040B804 /* ModuleOpener.swift in Sources */,
 				364A20891ED99A0A0043779C /* ModuleFactory.swift in Sources */,
 				364A208B1ED99A670043779C /* ModuleTransition.swift in Sources */,
 				364A208F1ED99AE50043779C /* ModuleTransitionHandler.swift in Sources */,
-				364A20851ED998E20043779C /* ModuleInput.swift in Sources */,
 				364A208D1ED99AA00043779C /* ModuleConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

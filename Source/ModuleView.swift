@@ -8,6 +8,10 @@
 
 import Foundation
 
+private protocol ModuleInput: class {
+    
+}
+
 public protocol ModuleView {
     associatedtype Output // Can't inherit from ModuleInput because currently Swift don't allow use other protocols for output var
     var output: Output! { get }
