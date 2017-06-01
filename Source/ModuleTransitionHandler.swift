@@ -10,7 +10,7 @@ import UIKit
 
 public protocol ModuleTransitionHandler: class {
     func openModule<View: ModuleView>(factory: ModuleFactory<View>) -> ModuleConfigurator
-    func close()
+    func close(animated: Bool)
 }
 
 extension UIViewController: ModuleTransitionHandler {
@@ -19,12 +19,12 @@ extension UIViewController: ModuleTransitionHandler {
         return ModuleConfiguratorImpl(source: self, destination: view, output: view.output)
     }
     
-    public func close() {
+    public func close(animated: Bool) {
         if let _ = presentingViewController {
-            dismiss(animated: true, completion: nil)
+            dismiss(animated: animated, completion: nil)
         } else if let navigationController = navigationController, navigationController.viewControllers.count > 0 {
-            navigationController.popViewController(animated: true)
-        } else {
+            navigationController.popViewController(animated: animated)
+        } else if let _ = view.superview {
             view.removeFromSuperview()
         }
     }
